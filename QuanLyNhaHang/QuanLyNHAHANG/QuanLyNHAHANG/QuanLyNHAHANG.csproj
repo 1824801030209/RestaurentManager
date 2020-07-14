@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00569509-E5E5-4329-B6A6-9E50AC4D50EE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyNHAHANG</RootNamespace>
+    <AssemblyName>QuanLyNHAHANG</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\fAddFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fAddFood.Designer.cs">
+      <DependentUpon>fAddFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fAddMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fAddMenu.Designer.cs">
+      <DependentUpon>fAddMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fBackFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fBackFood.Designer.cs">
+      <DependentUpon>fBackFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fConnet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fConnet.Designer.cs">
+      <DependentUpon>fConnet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fFood.Designer.cs">
+      <DependentUpon>fFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fNhanVien.Designer.cs">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ftable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ftable.Designer.cs">
+      <DependentUpon>ftable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QL_NhaHangDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QL_NhaHangDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI\fAddFood.resx">
+      <DependentUpon>fAddFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fAddMenu.resx">
+      <DependentUpon>fAddMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fBackFood.resx">
+      <DependentUpon>fBackFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fConnet.resx">
+      <DependentUpon>fConnet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fFood.resx">
+      <DependentUpon>fFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fNhanVien.resx">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ftable.resx">
+      <DependentUpon>ftable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QL_NhaHangDataSet.xsc">
+      <DependentUpon>QL_NhaHangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QL_NhaHangDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QL_NhaHangDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QL_NhaHangDataSet.xss">
+      <DependentUpon>QL_NhaHangDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6086.png_860.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
