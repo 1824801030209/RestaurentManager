@@ -36,5 +36,10 @@ namespace QuanLyNHAHANG
             fNhanVien f = new fNhanVien();
             f.ShowDialog();
         }
+
+        private void pnlTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

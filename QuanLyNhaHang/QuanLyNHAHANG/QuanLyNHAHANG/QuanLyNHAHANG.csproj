@@ -55,6 +55,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\clsDangNhap.cs" />
+    <Compile Include="BUS\IDangNhap.cs" />
+    <Compile Include="DAL\clsConnect.cs" />
     <Compile Include="GUI\fAddFood.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +88,23 @@
     <Compile Include="GUI\fFood.Designer.cs">
       <DependentUpon>fFood.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fLoading.Designer.cs">
+      <DependentUpon>fLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fNextTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fNextTable.Designer.cs">
+      <DependentUpon>fNextTable.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fNhanVien.cs">
       <SubType>Form</SubType>
@@ -103,12 +118,37 @@
     <Compile Include="GUI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fPay.Designer.cs">
+      <DependentUpon>fPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fPaymenthistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fPaymenthistory.Designer.cs">
+      <DependentUpon>fPaymenthistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fPutTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fPutTable.Designer.cs">
+      <DependentUpon>fPutTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ftable.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\ftable.Designer.cs">
       <DependentUpon>ftable.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fUpdate.Designer.cs">
+      <DependentUpon>fUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\iConnect.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QL_NhaHangDataSet.Designer.cs">
@@ -131,8 +171,14 @@
     <EmbeddedResource Include="GUI\fFood.resx">
       <DependentUpon>fFood.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fLoading.resx">
+      <DependentUpon>fLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fNextTable.resx">
+      <DependentUpon>fNextTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fNhanVien.resx">
       <DependentUpon>fNhanVien.cs</DependentUpon>
@@ -140,8 +186,20 @@
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fPay.resx">
+      <DependentUpon>fPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fPaymenthistory.resx">
+      <DependentUpon>fPaymenthistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fPutTable.resx">
+      <DependentUpon>fPutTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ftable.resx">
       <DependentUpon>ftable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fUpdate.resx">
+      <DependentUpon>fUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -179,6 +237,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\6086.png_860.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1477968.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\500_F_315836598_QIFlda2800bzuvqEnir6nHdnmvGQolI5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-icon1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

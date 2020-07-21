@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txbCSDL = new System.Windows.Forms.TextBox();
             this.txbTenMayChu = new System.Windows.Forms.TextBox();
@@ -66,6 +65,7 @@
             this.groupBox1.Size = new System.Drawing.Size(396, 273);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txbCSDL
             // 
@@ -93,6 +93,7 @@
             this.btnKiemTra.TabIndex = 5;
             this.btnKiemTra.Text = "kiểm tra";
             this.btnKiemTra.UseVisualStyleBackColor = false;
+            this.btnKiemTra.Click += new System.EventHandler(this.btnKiemTra_Click);
             // 
             // txbTenNguoiDung
             // 
@@ -114,6 +115,7 @@
             this.btnKetNoi.TabIndex = 6;
             this.btnKetNoi.Text = "Kết nối";
             this.btnKetNoi.UseVisualStyleBackColor = false;
+            this.btnKetNoi.Click += new System.EventHandler(this.btnKetNoi_Click);
             // 
             // txbMatKhau
             // 
@@ -135,6 +137,7 @@
             this.cbXacThuc.Name = "cbXacThuc";
             this.cbXacThuc.Size = new System.Drawing.Size(220, 24);
             this.cbXacThuc.TabIndex = 2;
+            this.cbXacThuc.SelectedIndexChanged += new System.EventHandler(this.cbXacThuc_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -194,6 +197,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "fConnet";
             this.Text = "fConnet";
+            this.Load += new System.EventHandler(this.fConnet_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -201,7 +205,6 @@
         }
 
         #endregion
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txbCSDL;
         private System.Windows.Forms.TextBox txbTenMayChu;

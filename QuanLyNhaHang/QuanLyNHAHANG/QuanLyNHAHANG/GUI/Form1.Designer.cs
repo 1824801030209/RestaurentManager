@@ -193,6 +193,7 @@
             this.pnlTable.Name = "pnlTable";
             this.pnlTable.Size = new System.Drawing.Size(230, 229);
             this.pnlTable.TabIndex = 3;
+            this.pnlTable.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTable_Paint);
             // 
             // txtTrangThai
             // 
