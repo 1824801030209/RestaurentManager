@@ -56,7 +56,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\clsDangNhap.cs" />
+    <Compile Include="BUS\clsNhanVien.cs" />
     <Compile Include="BUS\IDangNhap.cs" />
+    <Compile Include="BUS\INhanVien.cs" />
+    <Compile Include="BUS\Until.cs" />
     <Compile Include="DAL\clsConnect.cs" />
     <Compile Include="GUI\fAddFood.cs">
       <SubType>Form</SubType>

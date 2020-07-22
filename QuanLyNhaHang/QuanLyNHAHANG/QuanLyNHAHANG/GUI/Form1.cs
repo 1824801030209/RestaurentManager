@@ -15,9 +15,11 @@ namespace QuanLyNHAHANG
     public partial class Form1 : Form
     {
         private SqlConnection conn { get; set; }
-        public Form1(SqlConnection conn)
+        private string pass { get; set; }
+        public Form1(SqlConnection conn,string pass)
         {
             this.conn = conn;
+            this.pass = pass;
             InitializeComponent();
         }
 
@@ -33,7 +35,7 @@ namespace QuanLyNHAHANG
 
         private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fNhanVien f = new fNhanVien();
+            fNhanVien f = new fNhanVien(conn);
             f.ShowDialog();
         }
 

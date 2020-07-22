@@ -14,7 +14,7 @@ namespace QuanLyNHAHANG.GUI
     public partial class fLoading : Form
     {
         SqlConnection conn { get; set; }
-        public fLoading()
+        public fLoading(SqlConnection conn)
         {
             InitializeComponent();
             this.conn = conn;

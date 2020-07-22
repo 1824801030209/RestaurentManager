@@ -53,6 +53,7 @@ namespace QuanLyNHAHANG.GUI
             {
                 clsConnect conn = new clsConnect(txbTenMayChu.Text, txbCSDL.Text);
                 conn.SqlConnectionWindowsAuthentication().Open();
+
                 fLoading f = new fLoading(conn.SqlConnectionWindowsAuthentication());
                 conn.SqlConnectionWindowsAuthentication().Close();
                 this.Hide();
