@@ -86,7 +86,7 @@ namespace QuanLyNHAHANG.GUI
             txtHoNV.Text = "";
             txtTen.Text = "";
             cbGioiTinh.Text = "";
-            dateNgaySinh.Text = "05/30/1998";
+            dateNgaySinh.Text = "12/30/1990";
             txtSDT.Text = "";
             txtDiaChi.Text = "";
         }
@@ -215,6 +215,11 @@ namespace QuanLyNHAHANG.GUI
                 MessageBox.Show("Xóa hoàn tất!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 fNhanVien_Load(sender, e);
             }
+        }
+
+        private void cbGioiTinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

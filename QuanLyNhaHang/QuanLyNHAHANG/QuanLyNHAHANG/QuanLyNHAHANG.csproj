@@ -55,9 +55,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\clsBan.cs" />
     <Compile Include="BUS\clsDangNhap.cs" />
+    <Compile Include="BUS\clsHoaDon.cs" />
+    <Compile Include="BUS\clsKhuVuc.cs" />
     <Compile Include="BUS\clsNhanVien.cs" />
+    <Compile Include="BUS\IBan.cs" />
     <Compile Include="BUS\IDangNhap.cs" />
+    <Compile Include="BUS\IKhuVuc.cs" />
     <Compile Include="BUS\INhanVien.cs" />
     <Compile Include="BUS\Until.cs" />
     <Compile Include="DAL\clsConnect.cs" />
@@ -262,5 +267,18 @@
   <ItemGroup>
     <None Include="Resources\Save-icon1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-32.png" />
+    <None Include="Resources\icons8-delete-321.png" />
+    <None Include="Resources\icons8-save-32.png" />
+    <None Include="Resources\icons8-exit-32.png" />
+    <None Include="Resources\icons8-delete-32.png" />
+    <None Include="Resources\icons8-edit-32.png" />
+    <None Include="Resources\icons8-add-image-32.png" />
+    <None Include="Resources\icons8-salute-100.png" />
+    <Content Include="Resources\icons8-table-16.png" />
+    <None Include="Resources\icons8-table-161.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
