@@ -169,6 +169,7 @@
             this.btnPay.Size = new System.Drawing.Size(67, 62);
             this.btnPay.TabIndex = 23;
             this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // fPay
             // 
@@ -184,6 +185,7 @@
             this.Controls.Add(this.btnPay);
             this.Name = "fPay";
             this.Text = "fPay";
+            this.Load += new System.EventHandler(this.fPay_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
             this.ResumeLayout(false);

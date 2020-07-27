@@ -41,7 +41,7 @@
             this.pnlTable = new System.Windows.Forms.Panel();
             this.lbTrangThai = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtTruc = new System.Windows.Forms.TextBox();
+            this.lbTenQL = new System.Windows.Forms.TextBox();
             this.lbTime = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             this.qLNhaHangDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qL_NhaHangDataSet = new QuanLyNHAHANG.QL_NhaHangDataSet();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbDanhMuc = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgvThucDon = new System.Windows.Forms.DataGridView();
             this.clTenMonAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,6 +93,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbGiamGia = new System.Windows.Forms.ComboBox();
+            this.cbPhuPhi = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -202,7 +204,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.SteelBlue;
-            this.groupBox2.Controls.Add(this.txtTruc);
+            this.groupBox2.Controls.Add(this.lbTenQL);
             this.groupBox2.Controls.Add(this.lbTrangThai);
             this.groupBox2.Controls.Add(this.lbTime);
             this.groupBox2.Controls.Add(this.label6);
@@ -221,12 +223,12 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Bàn Phục Vụ";
             // 
-            // txtTruc
+            // lbTenQL
             // 
-            this.txtTruc.Location = new System.Drawing.Point(353, 95);
-            this.txtTruc.Name = "txtTruc";
-            this.txtTruc.Size = new System.Drawing.Size(153, 20);
-            this.txtTruc.TabIndex = 11;
+            this.lbTenQL.Location = new System.Drawing.Point(353, 95);
+            this.lbTenQL.Name = "lbTenQL";
+            this.lbTenQL.Size = new System.Drawing.Size(153, 20);
+            this.lbTenQL.TabIndex = 11;
             // 
             // lbTime
             // 
@@ -400,7 +402,7 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.SteelBlue;
-            this.groupBox4.Controls.Add(this.comboBox2);
+            this.groupBox4.Controls.Add(this.cbDanhMuc);
             this.groupBox4.Location = new System.Drawing.Point(860, 59);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(385, 55);
@@ -408,13 +410,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh Mục";
             // 
-            // comboBox2
+            // cbDanhMuc
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(48, 20);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(192, 21);
-            this.comboBox2.TabIndex = 0;
+            this.cbDanhMuc.FormattingEnabled = true;
+            this.cbDanhMuc.Location = new System.Drawing.Point(48, 20);
+            this.cbDanhMuc.Name = "cbDanhMuc";
+            this.cbDanhMuc.Size = new System.Drawing.Size(192, 21);
+            this.cbDanhMuc.TabIndex = 0;
+            this.cbDanhMuc.SelectedIndexChanged += new System.EventHandler(this.cbDanhMuc_SelectedIndexChanged);
             // 
             // groupBox5
             // 
@@ -503,6 +506,8 @@
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBox6.Controls.Add(this.cbPhuPhi);
+            this.groupBox6.Controls.Add(this.cbGiamGia);
             this.groupBox6.Controls.Add(this.btnPrint);
             this.groupBox6.Controls.Add(this.btnThanhToan);
             this.groupBox6.Controls.Add(this.label9);
@@ -518,7 +523,7 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(410, 36);
+            this.btnPrint.Location = new System.Drawing.Point(442, 36);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(75, 23);
             this.btnPrint.TabIndex = 6;
@@ -527,12 +532,13 @@
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.Location = new System.Drawing.Point(301, 36);
+            this.btnThanhToan.Location = new System.Drawing.Point(343, 36);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(75, 23);
             this.btnThanhToan.TabIndex = 5;
             this.btnThanhToan.Text = "Thanh Toán ";
             this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // label9
             // 
@@ -554,7 +560,7 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(104, 49);
+            this.numericUpDown2.Location = new System.Drawing.Point(104, 51);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(134, 20);
             this.numericUpDown2.TabIndex = 1;
@@ -649,6 +655,7 @@
             this.cbKhuVuc.Name = "cbKhuVuc";
             this.cbKhuVuc.Size = new System.Drawing.Size(160, 21);
             this.cbKhuVuc.TabIndex = 0;
+            this.cbKhuVuc.SelectedIndexChanged += new System.EventHandler(this.cbKhuVuc_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -677,6 +684,32 @@
             this.pictureBox1.Size = new System.Drawing.Size(99, 113);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // cbGiamGia
+            // 
+            this.cbGiamGia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGiamGia.FormattingEnabled = true;
+            this.cbGiamGia.Items.AddRange(new object[] {
+            "VNĐ",
+            "%"});
+            this.cbGiamGia.Location = new System.Drawing.Point(244, 19);
+            this.cbGiamGia.Name = "cbGiamGia";
+            this.cbGiamGia.Size = new System.Drawing.Size(62, 24);
+            this.cbGiamGia.TabIndex = 7;
+            // 
+            // cbPhuPhi
+            // 
+            this.cbPhuPhi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPhuPhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPhuPhi.FormattingEnabled = true;
+            this.cbPhuPhi.Items.AddRange(new object[] {
+            "VNĐ",
+            "%"});
+            this.cbPhuPhi.Location = new System.Drawing.Point(244, 51);
+            this.cbPhuPhi.Name = "cbPhuPhi";
+            this.cbPhuPhi.Size = new System.Drawing.Size(62, 24);
+            this.cbPhuPhi.TabIndex = 8;
             // 
             // Form1
             // 
@@ -740,7 +773,7 @@
         private System.Windows.Forms.Panel pnlTable;
         private System.Windows.Forms.TextBox lbTrangThai;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtTruc;
+        private System.Windows.Forms.TextBox lbTenQL;
         private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -759,7 +792,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clDonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn clThanhTien;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbDanhMuc;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dgvThucDon;
         private System.Windows.Forms.BindingSource qLNhaHangDataSetBindingSource;
@@ -791,6 +824,8 @@
         private System.Windows.Forms.ComboBox cbKhuVuc;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cbPhuPhi;
+        private System.Windows.Forms.ComboBox cbGiamGia;
     }
 }
 

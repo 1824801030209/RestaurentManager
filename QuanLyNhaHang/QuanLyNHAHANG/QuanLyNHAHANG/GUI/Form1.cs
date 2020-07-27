@@ -132,6 +132,45 @@ namespace QuanLyNHAHANG
         private void Form1_Load(object sender, EventArgs e)
         {
             loadTable();
+            loadConTrol();
+            loadCBMuc();
+            loadThucDon();
+            lbTenQL.Text = "Tam cao ";
+        }
+        void loadThucDon()
+        {
+            BUS.clsThucDon TD = new BUS.clsThucDon();
+            int ID = Convert.ToInt32(cbDanhMuc.SelectedValue);
+            if (ID == 0)
+            {
+                dgvThucDon.DataSource = TD.LoadThucDon(conn);
+            }
+            else
+            {
+                dgvThucDon.DataSource = TD.LoadThucDonByID(conn, ID);
+            }
+
+        }
+        void loadCBMuc()
+        {
+            BUS.clsKhuVuc KV = new BUS.clsKhuVuc();
+            BUS.clsDanhMuc DM = new BUS.clsDanhMuc();
+            DataTable table = KV.LoadKhuVuc(conn);
+            cbKhuVuc.DisplayMember = "TenKhuVuc";
+            cbKhuVuc.ValueMember = "ID";
+            cbKhuVuc.DataSource = table;
+            DataTable table2 = DM.LoadDanhMuc(conn);
+            cbDanhMuc.DisplayMember = "TenDanhMuc";
+            cbDanhMuc.ValueMember = "ID";
+            cbDanhMuc.DataSource = table2;
+        }
+        void loadConTrol()
+        {
+            cbPhuPhi.Text = "VNĐ";
+            cbGiamGia.Text = "VNĐ";
+            lbBan.Text = "";
+            lbKhuVuc.Text = "";
+            lbTrangThai.Text = "";
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -148,6 +187,40 @@ namespace QuanLyNHAHANG
         private void pnlTable_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void cbKhuVuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadTable();
+        }
+
+        private void cbDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadThucDon();
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            if (CheckThanhToan())
+            {
+                fPay f = new fPay(conn, lbKhuVuc.Text, lbBan.Text, date.Text.ToString(), lbTime.Text, TongCong, lbTenQL.Text, STTBan);
+                f.ShowDialog();
+                Form1_Load(sender, e);
+            }
+        }
+        bool CheckThanhToan()
+        {
+            if (lbKhuVuc.Text == "" && lbBan.Text == "" && lbTrangThai.Text == "")
+            {
+                MessageBox.Show("Bạn chưa lựa chọn bàn để thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+            if (lbTrangThai.Text == "TRỐNG" || lbTrangThai.Text == "ĐẶT TRƯỚC")
+            {
+                MessageBox.Show("Bàn hiện tại trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+            return true;
         }
     }
 }

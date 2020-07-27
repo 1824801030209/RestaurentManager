@@ -57,13 +57,17 @@
   <ItemGroup>
     <Compile Include="BUS\clsBan.cs" />
     <Compile Include="BUS\clsDangNhap.cs" />
+    <Compile Include="BUS\clsDanhMuc.cs" />
     <Compile Include="BUS\clsHoaDon.cs" />
     <Compile Include="BUS\clsKhuVuc.cs" />
     <Compile Include="BUS\clsNhanVien.cs" />
+    <Compile Include="BUS\clsThucDon.cs" />
     <Compile Include="BUS\IBan.cs" />
     <Compile Include="BUS\IDangNhap.cs" />
+    <Compile Include="BUS\IDanhMuc.cs" />
     <Compile Include="BUS\IKhuVuc.cs" />
     <Compile Include="BUS\INhanVien.cs" />
+    <Compile Include="BUS\IThucDon.cs" />
     <Compile Include="BUS\Until.cs" />
     <Compile Include="DAL\clsConnect.cs" />
     <Compile Include="GUI\fAddFood.cs">
