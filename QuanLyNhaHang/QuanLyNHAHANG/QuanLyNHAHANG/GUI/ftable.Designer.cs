@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvTable = new System.Windows.Forms.DataGridView();
             this.clSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,14 +37,15 @@
             this.clTongCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbDanhMuc = new System.Windows.Forms.ComboBox();
-            this.btnThemDM = new System.Windows.Forms.Button();
-            this.btnSuaDM = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnXoaDM = new System.Windows.Forms.Button();
+            this.btnSuaDM = new System.Windows.Forms.Button();
+            this.btnThemDM = new System.Windows.Forms.Button();
+            this.cbDanhMuc = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,19 +56,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(595, 405);
             this.panel1.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnXoaDM);
-            this.groupBox1.Controls.Add(this.btnSuaDM);
-            this.groupBox1.Controls.Add(this.btnThemDM);
-            this.groupBox1.Controls.Add(this.cbDanhMuc);
-            this.groupBox1.Location = new System.Drawing.Point(53, 56);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(474, 84);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Khu Vực";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // groupBox2
             // 
@@ -143,31 +131,18 @@
             this.colSTT.ReadOnly = true;
             this.colSTT.Visible = false;
             // 
-            // cbDanhMuc
+            // groupBox1
             // 
-            this.cbDanhMuc.FormattingEnabled = true;
-            this.cbDanhMuc.Location = new System.Drawing.Point(22, 38);
-            this.cbDanhMuc.Name = "cbDanhMuc";
-            this.cbDanhMuc.Size = new System.Drawing.Size(197, 21);
-            this.cbDanhMuc.TabIndex = 0;
-            // 
-            // btnThemDM
-            // 
-            this.btnThemDM.Location = new System.Drawing.Point(225, 36);
-            this.btnThemDM.Name = "btnThemDM";
-            this.btnThemDM.Size = new System.Drawing.Size(75, 23);
-            this.btnThemDM.TabIndex = 1;
-            this.btnThemDM.Text = "Thêm";
-            this.btnThemDM.UseVisualStyleBackColor = true;
-            // 
-            // btnSuaDM
-            // 
-            this.btnSuaDM.Location = new System.Drawing.Point(306, 36);
-            this.btnSuaDM.Name = "btnSuaDM";
-            this.btnSuaDM.Size = new System.Drawing.Size(75, 23);
-            this.btnSuaDM.TabIndex = 2;
-            this.btnSuaDM.Text = "Sửa";
-            this.btnSuaDM.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.btnXoaDM);
+            this.groupBox1.Controls.Add(this.btnSuaDM);
+            this.groupBox1.Controls.Add(this.btnThemDM);
+            this.groupBox1.Controls.Add(this.cbDanhMuc);
+            this.groupBox1.Location = new System.Drawing.Point(53, 56);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(474, 84);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Khu Vực";
             // 
             // btnXoaDM
             // 
@@ -178,6 +153,33 @@
             this.btnXoaDM.Text = "Xóa";
             this.btnXoaDM.UseVisualStyleBackColor = true;
             // 
+            // btnSuaDM
+            // 
+            this.btnSuaDM.Location = new System.Drawing.Point(306, 36);
+            this.btnSuaDM.Name = "btnSuaDM";
+            this.btnSuaDM.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaDM.TabIndex = 2;
+            this.btnSuaDM.Text = "Sửa";
+            this.btnSuaDM.UseVisualStyleBackColor = true;
+            // 
+            // btnThemDM
+            // 
+            this.btnThemDM.Location = new System.Drawing.Point(225, 36);
+            this.btnThemDM.Name = "btnThemDM";
+            this.btnThemDM.Size = new System.Drawing.Size(75, 23);
+            this.btnThemDM.TabIndex = 1;
+            this.btnThemDM.Text = "Thêm";
+            this.btnThemDM.UseVisualStyleBackColor = true;
+            this.btnThemDM.Click += new System.EventHandler(this.btnThemDM_Click);
+            // 
+            // cbDanhMuc
+            // 
+            this.cbDanhMuc.FormattingEnabled = true;
+            this.cbDanhMuc.Location = new System.Drawing.Point(22, 38);
+            this.cbDanhMuc.Name = "cbDanhMuc";
+            this.cbDanhMuc.Size = new System.Drawing.Size(197, 21);
+            this.cbDanhMuc.TabIndex = 0;
+            // 
             // ftable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,9 +189,9 @@
             this.Name = "ftable";
             this.Text = "Quản lý danh sách bàn";
             this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

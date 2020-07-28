@@ -50,7 +50,7 @@
             this.lbBan = new System.Windows.Forms.TextBox();
             this.lbKhuVuc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.date = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
@@ -64,14 +64,12 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbDanhMuc = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dgvThucDon = new System.Windows.Forms.DataGridView();
-            this.clTenMonAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbTongCong = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.cbPhuPhi = new System.Windows.Forms.ComboBox();
+            this.cbGiamGia = new System.Windows.Forms.ComboBox();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -93,8 +91,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbGiamGia = new System.Windows.Forms.ComboBox();
-            this.cbPhuPhi = new System.Windows.Forms.ComboBox();
+            this.dgvThucDon = new System.Windows.Forms.DataGridView();
+            this.clGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -103,7 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.qL_NhaHangDataSet)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -114,6 +112,7 @@
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -214,7 +213,7 @@
             this.groupBox2.Controls.Add(this.lbBan);
             this.groupBox2.Controls.Add(this.lbKhuVuc);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.date);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(277, 43);
             this.groupBox2.Name = "groupBox2";
@@ -303,14 +302,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Khu Vực";
             // 
-            // dateTimePicker1
+            // date
             // 
-            this.dateTimePicker1.CustomFormat = "MM/dd/yy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(104, 36);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.date.CustomFormat = "MM/dd/yy";
+            this.date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.date.Location = new System.Drawing.Point(104, 36);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(153, 20);
+            this.date.TabIndex = 1;
             // 
             // label1
             // 
@@ -430,47 +429,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thực Đơn";
             // 
-            // dgvThucDon
-            // 
-            this.dgvThucDon.AllowUserToAddRows = false;
-            this.dgvThucDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dgvThucDon.AutoGenerateColumns = false;
-            this.dgvThucDon.BackgroundColor = System.Drawing.Color.White;
-            this.dgvThucDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThucDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clTenMonAn,
-            this.clGia,
-            this.clDonVi});
-            this.dgvThucDon.DataSource = this.qLNhaHangDataSetBindingSource;
-            this.dgvThucDon.Location = new System.Drawing.Point(6, 33);
-            this.dgvThucDon.Name = "dgvThucDon";
-            this.dgvThucDon.ReadOnly = true;
-            this.dgvThucDon.RowHeadersVisible = false;
-            this.dgvThucDon.Size = new System.Drawing.Size(373, 301);
-            this.dgvThucDon.TabIndex = 1;
-            // 
-            // clTenMonAn
-            // 
-            this.clTenMonAn.HeaderText = "Tên";
-            this.clTenMonAn.Name = "clTenMonAn";
-            this.clTenMonAn.ReadOnly = true;
-            this.clTenMonAn.Width = 170;
-            // 
-            // clGia
-            // 
-            this.clGia.DataPropertyName = "DonGia";
-            this.clGia.HeaderText = "Đơn giá";
-            this.clGia.Name = "clGia";
-            this.clGia.ReadOnly = true;
-            // 
-            // clDonVi
-            // 
-            this.clDonVi.DataPropertyName = "DonVi";
-            this.clDonVi.HeaderText = "Đơn vị";
-            this.clDonVi.Name = "clDonVi";
-            this.clDonVi.ReadOnly = true;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.lbTongCong);
@@ -520,6 +478,32 @@
             this.groupBox6.TabIndex = 10;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Thanh Toán";
+            // 
+            // cbPhuPhi
+            // 
+            this.cbPhuPhi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPhuPhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPhuPhi.FormattingEnabled = true;
+            this.cbPhuPhi.Items.AddRange(new object[] {
+            "VNĐ",
+            "%"});
+            this.cbPhuPhi.Location = new System.Drawing.Point(244, 51);
+            this.cbPhuPhi.Name = "cbPhuPhi";
+            this.cbPhuPhi.Size = new System.Drawing.Size(62, 24);
+            this.cbPhuPhi.TabIndex = 8;
+            // 
+            // cbGiamGia
+            // 
+            this.cbGiamGia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGiamGia.FormattingEnabled = true;
+            this.cbGiamGia.Items.AddRange(new object[] {
+            "VNĐ",
+            "%"});
+            this.cbGiamGia.Location = new System.Drawing.Point(244, 19);
+            this.cbGiamGia.Name = "cbGiamGia";
+            this.cbGiamGia.Size = new System.Drawing.Size(62, 24);
+            this.cbGiamGia.TabIndex = 7;
             // 
             // btnPrint
             // 
@@ -685,31 +669,36 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // cbGiamGia
+            // dgvThucDon
             // 
-            this.cbGiamGia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGiamGia.FormattingEnabled = true;
-            this.cbGiamGia.Items.AddRange(new object[] {
-            "VNĐ",
-            "%"});
-            this.cbGiamGia.Location = new System.Drawing.Point(244, 19);
-            this.cbGiamGia.Name = "cbGiamGia";
-            this.cbGiamGia.Size = new System.Drawing.Size(62, 24);
-            this.cbGiamGia.TabIndex = 7;
+            this.dgvThucDon.AllowUserToAddRows = false;
+            this.dgvThucDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvThucDon.BackgroundColor = System.Drawing.Color.White;
+            this.dgvThucDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThucDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clGia,
+            this.clDonVi});
+            this.dgvThucDon.Location = new System.Drawing.Point(6, 33);
+            this.dgvThucDon.Name = "dgvThucDon";
+            this.dgvThucDon.ReadOnly = true;
+            this.dgvThucDon.RowHeadersVisible = false;
+            this.dgvThucDon.Size = new System.Drawing.Size(373, 301);
+            this.dgvThucDon.TabIndex = 1;
             // 
-            // cbPhuPhi
+            // clGia
             // 
-            this.cbPhuPhi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPhuPhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPhuPhi.FormattingEnabled = true;
-            this.cbPhuPhi.Items.AddRange(new object[] {
-            "VNĐ",
-            "%"});
-            this.cbPhuPhi.Location = new System.Drawing.Point(244, 51);
-            this.cbPhuPhi.Name = "cbPhuPhi";
-            this.cbPhuPhi.Size = new System.Drawing.Size(62, 24);
-            this.cbPhuPhi.TabIndex = 8;
+            this.clGia.DataPropertyName = "DonGia";
+            this.clGia.HeaderText = "Đơn giá";
+            this.clGia.Name = "clGia";
+            this.clGia.ReadOnly = true;
+            // 
+            // clDonVi
+            // 
+            this.clDonVi.DataPropertyName = "DonVi";
+            this.clDonVi.HeaderText = "Đơn vị";
+            this.clDonVi.Name = "clDonVi";
+            this.clDonVi.ReadOnly = true;
             // 
             // Form1
             // 
@@ -740,7 +729,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.qL_NhaHangDataSet)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -753,6 +741,7 @@
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -782,7 +771,7 @@
         private System.Windows.Forms.TextBox lbBan;
         private System.Windows.Forms.TextBox lbKhuVuc;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker date;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvHoaDon;
@@ -794,12 +783,8 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox cbDanhMuc;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DataGridView dgvThucDon;
         private System.Windows.Forms.BindingSource qLNhaHangDataSetBindingSource;
         private QL_NhaHangDataSet qL_NhaHangDataSet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clTenMonAn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clDonVi;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbTongCong;
         private System.Windows.Forms.Label label7;
@@ -826,6 +811,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cbPhuPhi;
         private System.Windows.Forms.ComboBox cbGiamGia;
+        private System.Windows.Forms.DataGridView dgvThucDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clDonVi;
     }
 }
 

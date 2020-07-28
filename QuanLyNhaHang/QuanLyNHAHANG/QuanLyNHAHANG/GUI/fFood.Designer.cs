@@ -30,21 +30,21 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnXoaDM = new System.Windows.Forms.Button();
-            this.btnSuaDM = new System.Windows.Forms.Button();
-            this.btnThemDM = new System.Windows.Forms.Button();
-            this.cbDanhMuc = new System.Windows.Forms.ComboBox();
             this.dgvThucDon = new System.Windows.Forms.DataGridView();
             this.clSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTenMonAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clDonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnXoaDM = new System.Windows.Forms.Button();
+            this.btnSuaDM = new System.Windows.Forms.Button();
+            this.btnThemDM = new System.Windows.Forms.Button();
+            this.cbDanhMuc = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,12 +59,70 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvThucDon);
-            this.groupBox2.Location = new System.Drawing.Point(53, 182);
+            this.groupBox2.Location = new System.Drawing.Point(93, 160);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(315, 202);
+            this.groupBox2.Size = new System.Drawing.Size(428, 202);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thực Đơn ";
+            // 
+            // dgvThucDon
+            // 
+            this.dgvThucDon.AllowUserToAddRows = false;
+            this.dgvThucDon.BackgroundColor = System.Drawing.Color.White;
+            this.dgvThucDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThucDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clSTT,
+            this.clTenMonAn,
+            this.clGia,
+            this.clDonVi,
+            this.clID});
+            this.dgvThucDon.Location = new System.Drawing.Point(17, 24);
+            this.dgvThucDon.Name = "dgvThucDon";
+            this.dgvThucDon.ReadOnly = true;
+            this.dgvThucDon.RowHeadersVisible = false;
+            this.dgvThucDon.Size = new System.Drawing.Size(395, 172);
+            this.dgvThucDon.TabIndex = 1;
+            this.dgvThucDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThucDon_CellContentClick);
+            // 
+            // clSTT
+            // 
+            this.clSTT.HeaderText = "STT";
+            this.clSTT.Name = "clSTT";
+            this.clSTT.ReadOnly = true;
+            this.clSTT.Width = 50;
+            // 
+            // clTenMonAn
+            // 
+            this.clTenMonAn.DataPropertyName = "TenMonAn";
+            this.clTenMonAn.HeaderText = "Tên";
+            this.clTenMonAn.Name = "clTenMonAn";
+            this.clTenMonAn.ReadOnly = true;
+            this.clTenMonAn.Width = 170;
+            // 
+            // clGia
+            // 
+            this.clGia.DataPropertyName = "DonGia";
+            this.clGia.HeaderText = "Đơn giá";
+            this.clGia.Name = "clGia";
+            this.clGia.ReadOnly = true;
+            this.clGia.Width = 90;
+            // 
+            // clDonVi
+            // 
+            this.clDonVi.DataPropertyName = "DonVi";
+            this.clDonVi.HeaderText = "Đơn vị";
+            this.clDonVi.Name = "clDonVi";
+            this.clDonVi.ReadOnly = true;
+            this.clDonVi.Width = 80;
+            // 
+            // clID
+            // 
+            this.clID.DataPropertyName = "ID";
+            this.clID.HeaderText = "ID";
+            this.clID.Name = "clID";
+            this.clID.ReadOnly = true;
+            this.clID.Visible = false;
             // 
             // groupBox1
             // 
@@ -114,76 +172,18 @@
             this.cbDanhMuc.Size = new System.Drawing.Size(197, 21);
             this.cbDanhMuc.TabIndex = 0;
             // 
-            // dgvThucDon
-            // 
-            this.dgvThucDon.AllowUserToAddRows = false;
-            this.dgvThucDon.BackgroundColor = System.Drawing.Color.White;
-            this.dgvThucDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThucDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clSTT,
-            this.clTenMonAn,
-            this.clGia,
-            this.clDonVi,
-            this.clID});
-            this.dgvThucDon.Location = new System.Drawing.Point(19, 19);
-            this.dgvThucDon.Name = "dgvThucDon";
-            this.dgvThucDon.ReadOnly = true;
-            this.dgvThucDon.RowHeadersVisible = false;
-            this.dgvThucDon.Size = new System.Drawing.Size(281, 172);
-            this.dgvThucDon.TabIndex = 1;
-            this.dgvThucDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThucDon_CellContentClick);
-            // 
-            // clSTT
-            // 
-            this.clSTT.HeaderText = "STT";
-            this.clSTT.Name = "clSTT";
-            this.clSTT.ReadOnly = true;
-            this.clSTT.Width = 50;
-            // 
-            // clTenMonAn
-            // 
-            this.clTenMonAn.DataPropertyName = "TenMonAn";
-            this.clTenMonAn.HeaderText = "Tên";
-            this.clTenMonAn.Name = "clTenMonAn";
-            this.clTenMonAn.ReadOnly = true;
-            this.clTenMonAn.Width = 170;
-            // 
-            // clGia
-            // 
-            this.clGia.DataPropertyName = "DonGia";
-            this.clGia.HeaderText = "Đơn giá";
-            this.clGia.Name = "clGia";
-            this.clGia.ReadOnly = true;
-            this.clGia.Width = 90;
-            // 
-            // clDonVi
-            // 
-            this.clDonVi.DataPropertyName = "DonVi";
-            this.clDonVi.HeaderText = "Đơn vị";
-            this.clDonVi.Name = "clDonVi";
-            this.clDonVi.ReadOnly = true;
-            this.clDonVi.Width = 80;
-            // 
-            // clID
-            // 
-            this.clID.DataPropertyName = "ID";
-            this.clID.HeaderText = "ID";
-            this.clID.Name = "clID";
-            this.clID.ReadOnly = true;
-            this.clID.Visible = false;
-            // 
             // fFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(637, 450);
             this.Controls.Add(this.panel1);
             this.Name = "fFood";
             this.Text = "Quản lý thực đơn";
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
