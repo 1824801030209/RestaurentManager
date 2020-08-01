@@ -36,6 +36,7 @@
             // 
             // btnHuy
             // 
+            this.btnHuy.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnHuy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnHuy.FlatAppearance.BorderSize = 0;
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -43,10 +44,11 @@
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(38, 36);
             this.btnHuy.TabIndex = 7;
-            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.UseVisualStyleBackColor = false;
             // 
             // btnOK
             // 
+            this.btnOK.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnOK.FlatAppearance.BorderSize = 0;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -54,7 +56,8 @@
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(38, 36);
             this.btnOK.TabIndex = 6;
-            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // txtName
             // 

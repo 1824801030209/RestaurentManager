@@ -55,6 +55,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(595, 405);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // groupBox2
             // 
@@ -65,6 +66,7 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thực Đơn ";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // dgvThucDon
             // 
@@ -135,7 +137,7 @@
             this.groupBox1.Size = new System.Drawing.Size(474, 84);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Khu Vực";
+            this.groupBox1.Text = "Danh Muc";
             // 
             // btnXoaDM
             // 
@@ -145,6 +147,7 @@
             this.btnXoaDM.TabIndex = 3;
             this.btnXoaDM.Text = "Xóa";
             this.btnXoaDM.UseVisualStyleBackColor = true;
+            this.btnXoaDM.Click += new System.EventHandler(this.btnXoaDM_Click);
             // 
             // btnSuaDM
             // 
@@ -154,6 +157,7 @@
             this.btnSuaDM.TabIndex = 2;
             this.btnSuaDM.Text = "Sửa";
             this.btnSuaDM.UseVisualStyleBackColor = true;
+            this.btnSuaDM.Click += new System.EventHandler(this.btnSuaDM_Click);
             // 
             // btnThemDM
             // 
@@ -163,6 +167,7 @@
             this.btnThemDM.TabIndex = 1;
             this.btnThemDM.Text = "Thêm";
             this.btnThemDM.UseVisualStyleBackColor = true;
+            this.btnThemDM.Click += new System.EventHandler(this.btnThemDM_Click);
             // 
             // cbDanhMuc
             // 
@@ -171,6 +176,7 @@
             this.cbDanhMuc.Name = "cbDanhMuc";
             this.cbDanhMuc.Size = new System.Drawing.Size(197, 21);
             this.cbDanhMuc.TabIndex = 0;
+            this.cbDanhMuc.SelectedIndexChanged += new System.EventHandler(this.cbDanhMuc_SelectedIndexChanged);
             // 
             // fFood
             // 
@@ -180,6 +186,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "fFood";
             this.Text = "Quản lý thực đơn";
+            this.Load += new System.EventHandler(this.fFood_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).EndInit();

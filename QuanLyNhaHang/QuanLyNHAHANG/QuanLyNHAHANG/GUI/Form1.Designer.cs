@@ -64,6 +64,9 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbDanhMuc = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.dgvThucDon = new System.Windows.Forms.DataGridView();
+            this.clGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbTongCong = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -91,9 +94,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dgvThucDon = new System.Windows.Forms.DataGridView();
-            this.clGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -102,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.qL_NhaHangDataSet)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -112,7 +113,6 @@
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -151,12 +151,14 @@
             this.quảnLýDanhSáchBànToolStripMenuItem.Name = "quảnLýDanhSáchBànToolStripMenuItem";
             this.quảnLýDanhSáchBànToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.quảnLýDanhSáchBànToolStripMenuItem.Text = "Quản Lý Danh Sách Bàn";
+            this.quảnLýDanhSáchBànToolStripMenuItem.Click += new System.EventHandler(this.quảnLýDanhSáchBànToolStripMenuItem_Click);
             // 
             // quảnLýThựcĐơnToolStripMenuItem
             // 
             this.quảnLýThựcĐơnToolStripMenuItem.Name = "quảnLýThựcĐơnToolStripMenuItem";
             this.quảnLýThựcĐơnToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.quảnLýThựcĐơnToolStripMenuItem.Text = "Quản Lý Thực Đơn ";
+            this.quảnLýThựcĐơnToolStripMenuItem.Click += new System.EventHandler(this.quảnLýThựcĐơnToolStripMenuItem_Click);
             // 
             // lịchSửTTToolStripMenuItem
             // 
@@ -429,6 +431,37 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thực Đơn";
             // 
+            // dgvThucDon
+            // 
+            this.dgvThucDon.AllowUserToAddRows = false;
+            this.dgvThucDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvThucDon.BackgroundColor = System.Drawing.Color.White;
+            this.dgvThucDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThucDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clGia,
+            this.clDonVi});
+            this.dgvThucDon.Location = new System.Drawing.Point(6, 33);
+            this.dgvThucDon.Name = "dgvThucDon";
+            this.dgvThucDon.ReadOnly = true;
+            this.dgvThucDon.RowHeadersVisible = false;
+            this.dgvThucDon.Size = new System.Drawing.Size(373, 301);
+            this.dgvThucDon.TabIndex = 1;
+            // 
+            // clGia
+            // 
+            this.clGia.DataPropertyName = "DonGia";
+            this.clGia.HeaderText = "Đơn giá";
+            this.clGia.Name = "clGia";
+            this.clGia.ReadOnly = true;
+            // 
+            // clDonVi
+            // 
+            this.clDonVi.DataPropertyName = "DonVi";
+            this.clDonVi.HeaderText = "Đơn vị";
+            this.clDonVi.Name = "clDonVi";
+            this.clDonVi.ReadOnly = true;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.lbTongCong);
@@ -669,37 +702,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // dgvThucDon
-            // 
-            this.dgvThucDon.AllowUserToAddRows = false;
-            this.dgvThucDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dgvThucDon.BackgroundColor = System.Drawing.Color.White;
-            this.dgvThucDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThucDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clGia,
-            this.clDonVi});
-            this.dgvThucDon.Location = new System.Drawing.Point(6, 33);
-            this.dgvThucDon.Name = "dgvThucDon";
-            this.dgvThucDon.ReadOnly = true;
-            this.dgvThucDon.RowHeadersVisible = false;
-            this.dgvThucDon.Size = new System.Drawing.Size(373, 301);
-            this.dgvThucDon.TabIndex = 1;
-            // 
-            // clGia
-            // 
-            this.clGia.DataPropertyName = "DonGia";
-            this.clGia.HeaderText = "Đơn giá";
-            this.clGia.Name = "clGia";
-            this.clGia.ReadOnly = true;
-            // 
-            // clDonVi
-            // 
-            this.clDonVi.DataPropertyName = "DonVi";
-            this.clDonVi.HeaderText = "Đơn vị";
-            this.clDonVi.Name = "clDonVi";
-            this.clDonVi.ReadOnly = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -729,6 +731,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.qL_NhaHangDataSet)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -741,7 +744,6 @@
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

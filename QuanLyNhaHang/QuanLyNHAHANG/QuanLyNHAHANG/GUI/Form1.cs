@@ -222,5 +222,17 @@ namespace QuanLyNHAHANG
             }
             return true;
         }
+
+        private void quảnLýThựcĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fFood f = new fFood(conn);
+            f.ShowDialog();
+            Form1_Load(sender, e);
+        }
+
+        private void quảnLýDanhSáchBànToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
